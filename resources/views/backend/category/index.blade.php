@@ -9,12 +9,12 @@
 <div class="container">
 
     <h1>View Category</h1>
-    <a href="{{ url('admin/category/create') }}" class="btn btn-primary btn-sm my-3">Create</a>
-    @if(session('status'))
+    <a href="{{ url('admin/category/create') }}" class="btn btn-primary btn-sm my-3">
+        <i class="fas fa-plus-circle mr-1"></i>
+        Create
+    </a>
 
-    <div class="alert alert-success"> {{ session('status') }} </div>
-
-    @endif
+    @include('alerts')
 
     <div class="row">
 
@@ -33,8 +33,12 @@
                         <td>{{ $cat->id }}</td>
                         <td>{{ $cat->name  }}</td>
                         <td>
-                            <a href="#" class="btn btn-success btn-sm">Edit</a>
-                            <a href="#" class="btn btn-danger btn-sm">Del</a>
+                        <a href="{{ url("admin/category/$cat->id/edit") }}" class="btn btn-success btn-sm">
+                            <i class="fas fa-edit mr-1"></i> Edit
+                        </a>
+                        <a href="{{ url("admin/category/$cat->id/delete") }}" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt mr-1"></i>  Del
+                        </a>
                         </td>
                     </tr>
                     @endforeach
