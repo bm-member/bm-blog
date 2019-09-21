@@ -1,6 +1,6 @@
 ## Installation
 
-- Clone the repo `git clone https://github.com/thetminnhtun/bm-blog.git`
+- Clone the repo `git clone https://github.com/bm-member/bm-blog.git`
 - `cd` into project folder
 - Run `composer install`
 - Create database
