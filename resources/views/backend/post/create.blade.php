@@ -9,6 +9,7 @@
         <div class="col-md-10">
             <form action="{{ url('admin/post') }}" method="post">
                 @csrf
+            <input type="hidden" name='user_id' value="{{ auth()->user()->id }}">
                 <div class="form-group">
                     <label>Title</label>
                     <input type="text" class="form-control" name='title'>
@@ -24,7 +25,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Content</label>
-                    <textarea class="form-control" name='content' rows="3"></textarea>
+                    <textarea id="summernote" class="form-control" name='content' rows="3"></textarea>
                 </div>
                 <button class="btn btn-primary" type="sumbit">Create</button>
                 <a href="{{ url()->previous() }}" class="btn btn-secondary">Back</a>
@@ -32,6 +33,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 @endsection

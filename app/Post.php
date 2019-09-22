@@ -9,6 +9,7 @@ class Post extends Model
     protected $fillable = [
         'category_id',
         'title',
-        'content'
+        'content',
+        'user_id'
     ];
 }

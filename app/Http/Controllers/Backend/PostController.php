@@ -39,17 +39,22 @@ class PostController extends Controller
 
     public function edit($id)
     {
-        //
+        $cats = Category::all();
+        $post = Post::findOrFail($id);
+        return view('backend.post.edit', compact('cats', 'post'));
     }
 
 
     public function update(Request $request, $id)
     {
-        //
+        Post::findOrFail($id)->update($request->all());
+
+        return redirect('admin/post')->with('status', 'Updated Succes');
     }
 
     public function destroy($id)
     {
-        //
+        Post::findOrFail($id)->delete();
+        return redirect('admin/post')->with('status', 'Deleted Succes');
     }
 }
