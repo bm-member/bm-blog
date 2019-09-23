@@ -20,4 +20,8 @@ Route::group(['prefix'=> 'admin', 'namespace' => 'Backend', 'middleware' => 'myw
     Route::post('/post/{id}/edit', 'PostController@update');
     Route::get('/post/{id}/delete', 'PostController@destroy');
 
+    // User Routes
+    Route::get('/profile', 'UserController@show');
+    Route::get('/profile/edit', 'UserController@edit');
+    Route::post('/profile/edit', 'UserController@update');
 });

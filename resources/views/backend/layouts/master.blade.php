@@ -19,7 +19,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+<link href="{{ asset('backend/plugins/summernote/summernote-bs4.css') }}" rel="stylesheet">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -60,12 +60,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{ asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('backend/dist/js/adminlte.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+<script src="{{ asset('backend/plugins/summernote/summernote-bs4.min.js') }}"></script>
     <script>
         $('#summernote').summernote({
-          placeholder: 'Hello bootstrap 4',
           tabsize: 2,
-          height: 100
+          height: 400
         });
       </script>
 </body>
