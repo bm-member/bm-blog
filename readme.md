@@ -11,7 +11,3 @@
 - Run `php artisan migrate --seed` to create table and to seed data
 - Run `php artisan serve` and the App will be running on `localhost:8000`
 - Done. 
-
-### Review
-
-https://forms.gle/tbrsjrSEvJsnnvQK9
